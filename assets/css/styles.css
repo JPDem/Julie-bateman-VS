@@ -1,0 +1,127 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+section {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 150px 1fr;
+      grid-template-columns: 150px 1fr;
+  -ms-grid-rows: 50px 1fr 50px;
+      grid-template-rows: 50px 1fr 50px;
+      grid-template-areas: "header1 header1" ". gallery" "footer footer";
+  grid-gap: 15px;
+}
+
+nav {
+  background: lightcoral;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: header1;
+}
+
+nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav ul li {
+  padding: 0 20px 0 20px;
+  list-style: none;
+  border: 2px black dotted;
+}
+
+nav ul .home-link {
+  margin-right: auto;
+  border: 2px black dotted;
+}
+
+.banner {
+  width: 100%;
+}
+
+.side-bar {
+  background: lightgreen;
+  position: fixed;
+  height: 70%;
+  top: 15%;
+  width: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+.side-bar ul li {
+  padding: 40% 0;
+  font-size: 1.5rem;
+  border: 2px black dotted;
+}
+
+.image-gallery {
+  background: lightblue;
+  border-radius: 25px;
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: gallery;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.image-gallery img {
+  border-radius: 15px;
+  margin: 10px;
+}
+
+footer {
+  background: #e6e66a;
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: footer;
+}
+
+img {
+  height: 300px;
+  width: auto;
+}
+/*# sourceMappingURL=styles.css.map */

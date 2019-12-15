@@ -1,0 +1,21 @@
+@mixin flexCenter($justify-content) {
+  display: flex;
+  justify-content: $justify-content;
+  align-items: center;
+}
+
+@mixin border {
+  border: 2px black dotted;
+}
+
+@mixin grid {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  grid-template-rows: 50px 1fr 50px;
+  // grid-gap: 10px;
+  grid-template-areas:
+    "header1 header1"
+    ". gallery"
+    "footer footer";
+  grid-gap: 15px;
+}
