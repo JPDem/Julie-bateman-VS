@@ -58,9 +58,9 @@ nav ul .home-link {
 .side-bar {
   background: lightgreen;
   position: fixed;
-  height: 70%;
+  height: 60%;
   top: 15%;
-  width: 150px;
+  width: 8.5%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -83,9 +83,12 @@ nav ul .home-link {
 }
 
 .side-bar ul li {
-  padding: 40% 0;
-  font-size: 1.5rem;
+  padding: 10% 0;
+  margin: 5% 0;
+  font-size: 1.2rem;
+  text-align: center;
   border: 2px black dotted;
+  cursor: pointer;
 }
 
 .image-gallery {
@@ -108,7 +111,7 @@ nav ul .home-link {
 }
 
 .image-gallery img {
-  border-radius: 15px;
+  border-radius: 10px;
   margin: 10px;
 }
 
@@ -121,7 +124,34 @@ footer {
 }
 
 img {
-  height: 300px;
+  max-height: 300px;
   width: auto;
+}
+
+.active {
+  background: #b61f1f;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  -webkit-animation: fadeIn 0.5s ease-in-out;
+          animation: fadeIn 0.5s ease-in-out;
 }
 /*# sourceMappingURL=styles.css.map */

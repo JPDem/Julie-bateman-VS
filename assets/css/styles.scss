@@ -38,9 +38,10 @@ nav {
 .side-bar {
   background: lightgreen;
   position: fixed;
-  height: 70%;
+  height: 60%;
   top: 15%;
-  width: 150px;
+  width: 8.5%;
+  // left: 1%;
   @include flexCenter(center);
   flex-direction: column;
   flex-wrap: wrap;
@@ -48,9 +49,12 @@ nav {
   border-top-right-radius: 25px;
   border-bottom-right-radius: 25px;
   ul li {
-    padding: 40% 0;
-    font-size: 1.5rem;
+    padding: 10% 0;
+    margin: 5% 0;
+    font-size: 1.2rem;
+    text-align: center;
     @include border();
+    cursor: pointer;
   }
 }
 
@@ -61,7 +65,7 @@ nav {
   @include flexCenter(center);
   flex-wrap: wrap;
   img {
-    border-radius: 15px;
+    border-radius: 10px;
     margin: 10px;
   }
 }
@@ -72,6 +76,23 @@ footer {
 }
 
 img {
-  height: 300px;
+  max-height: 300px;
   width: auto;
+}
+
+.active {
+  background: rgb(182, 31, 31);
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out;
 }
