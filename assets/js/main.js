@@ -35,6 +35,7 @@ const filter = () => {
   const filterListener = () => {
     for (let i = 0; i < btns.length; i++) {
       btns[i].addEventListener("click", () => {
+        window.scrollTo();
         resetAnimation();
         toggleActiveClass(btns[i]);
         toggleArt(btns[i].dataset.style);
