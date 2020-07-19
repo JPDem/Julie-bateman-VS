@@ -2,10 +2,11 @@
   display: flex;
   justify-content: $justify-content;
   align-items: center;
+  align-content: center;
 }
 
 @mixin border {
-  border: 2px black dotted;
+  border: 1px rgb(141, 138, 138) solid;
 }
 
 @mixin grid {

@@ -1,8 +1,9 @@
-* {
+body {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  font-family: "Dosis", sans-serif;
 }
 
 section {
@@ -14,6 +15,7 @@ section {
       grid-template-rows: 50px 1fr 50px;
       grid-template-areas: "header1 header1" ". gallery" "footer footer";
   grid-gap: 15px;
+  background-color: #ececec;
 }
 
 nav {
@@ -21,7 +23,6 @@ nav {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  width: 100%;
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
@@ -38,17 +39,23 @@ nav ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  padding: 0;
+  margin: auto;
+  height: 100%;
+  text-align: bottom;
 }
 
 nav ul li {
-  padding: 0 20px 0 20px;
+  padding: 0 20px;
+  height: 100%;
   list-style: none;
-  border: 2px black dotted;
+  border: 1px #8d8a8a solid;
 }
 
 nav ul .home-link {
   margin-right: auto;
-  border: 2px black dotted;
 }
 
 .banner {
@@ -56,7 +63,7 @@ nav ul .home-link {
 }
 
 .side-bar {
-  background: lightgreen;
+  background: #bdc3c7;
   position: fixed;
   height: 60%;
   top: 15%;
@@ -70,16 +77,17 @@ nav ul .home-link {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  border-top-right-radius: 25px;
-  border-bottom-right-radius: 25px;
+  align-content: center;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
 }
 
 .side-bar ul li {
@@ -87,13 +95,13 @@ nav ul .home-link {
   margin: 5% 0;
   font-size: 1.2rem;
   text-align: center;
-  border: 2px black dotted;
+  border: 1px #8d8a8a solid;
   cursor: pointer;
+  list-style: none;
 }
 
 .image-gallery {
-  background: lightblue;
-  border-radius: 25px;
+  border-radius: 3px;
   -ms-grid-row: 2;
   -ms-grid-column: 2;
   grid-area: gallery;
@@ -106,12 +114,14 @@ nav ul .home-link {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
 
 .image-gallery img {
-  border-radius: 10px;
+  border-radius: 3px;
   margin: 10px;
 }
 

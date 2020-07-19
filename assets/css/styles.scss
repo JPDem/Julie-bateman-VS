@@ -1,33 +1,41 @@
 @import "./mixin-variables";
+$tabColor: #bdc3c7;
+$backgroundColor: #ececec;
+$activeButton: rgb(182, 31, 31);
 
-* {
+body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Dosis", sans-serif;
 }
 
 section {
   @include grid();
+  background-color: $backgroundColor;
 }
 
 nav {
   background: lightcoral;
   position: sticky;
   top: 0;
-  width: 100%;
   grid-area: header1;
 
   ul {
     @include flexCenter(flex-end);
+    padding: 0;
+    margin: auto;
+    height: 100%;
+    text-align: bottom;
     // justify-items: center;
     li {
-      padding: 0 20px 0 20px;
+      padding: 0 20px;
+      height: 100%;
       list-style: none;
       @include border();
     }
     .home-link {
       margin-right: auto;
-      @include border();
     }
   }
 }
@@ -36,7 +44,7 @@ nav {
   width: 100%;
 }
 .side-bar {
-  background: lightgreen;
+  background: $tabColor;
   position: fixed;
   height: 60%;
   top: 15%;
@@ -46,8 +54,8 @@ nav {
   flex-direction: column;
   flex-wrap: wrap;
   align-content: center;
-  border-top-right-radius: 25px;
-  border-bottom-right-radius: 25px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
   ul li {
     padding: 10% 0;
     margin: 5% 0;
@@ -55,17 +63,18 @@ nav {
     text-align: center;
     @include border();
     cursor: pointer;
+    list-style: none;
   }
 }
 
 .image-gallery {
-  background: lightblue;
-  border-radius: 25px;
+  // background: $sectionColor;
+  border-radius: 3px;
   grid-area: gallery;
   @include flexCenter(center);
   flex-wrap: wrap;
   img {
-    border-radius: 10px;
+    border-radius: 3px;
     margin: 10px;
   }
 }
@@ -81,7 +90,7 @@ img {
 }
 
 .active {
-  background: rgb(182, 31, 31);
+  background: $activeButton;
 }
 
 @keyframes fadeIn {
