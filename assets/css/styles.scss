@@ -1,42 +1,69 @@
 @import "./mixin-variables";
-$tabColor: #bdc3c7;
+$tabColor: rgb(255, 122, 122);
 $backgroundColor: #ececec;
-$activeButton: rgb(182, 31, 31);
+$activeButton: rgb(141, 209, 203);
+$navColor: #c268b7;
+@mixin buttonColor($opacity) {
+  background-color: rgba(141, 209, 203, $opacity);
+}
 
-body {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Dosis", sans-serif;
-}
-
-section {
-  @include grid();
-  background-color: $backgroundColor;
 }
 
 nav {
-  background: lightcoral;
+  li,
+  a,
+  button {
+    font-weight: 400;
+    font-size: 16px;
+    color: rgb(26, 26, 26);
+    text-decoration: none;
+  }
+}
+
+.logo {
+  cursor: pointer;
+  text-decoration: none;
+  border: solid white 1px;
+  padding: 5px 10px;
+  color: white;
+  font-family: "Indie Flower", cursive;
+}
+.nav-links {
+  list-style: none;
+  @include flexCenter(center);
+  li {
+    padding: 0 20px;
+    a {
+      transition: all 0.2s ease 0s;
+    }
+    a:hover {
+      color: yellow;
+    }
+  }
+}
+
+header {
   position: sticky;
   top: 0;
-  grid-area: header1;
-
-  ul {
-    @include flexCenter(flex-end);
-    padding: 0;
-    margin: auto;
-    height: 100%;
-    text-align: bottom;
-    // justify-items: center;
-    li {
-      padding: 0 20px;
-      height: 100%;
-      list-style: none;
-      @include border();
-    }
-    .home-link {
-      margin-right: auto;
-    }
+  font-family: "Dosis", sans-serif;
+  @include flexCenter(space-between);
+  padding: 10px 10%;
+  background-color: $navColor;
+  button {
+    font-family: "Dosis";
+    padding: 9px 25px;
+    @include buttonColor(1);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.5s ease 0s;
+  }
+  button:hover {
+    @include buttonColor(0.7);
   }
 }
 
@@ -68,7 +95,7 @@ nav {
 }
 
 .image-gallery {
-  // background: $sectionColor;
+  // background: $Color;
   border-radius: 3px;
   grid-area: gallery;
   @include flexCenter(center);
@@ -104,4 +131,16 @@ img {
 
 .fade-in {
   animation: fadeIn 0.5s ease-in-out;
+}
+
+footer {
+  .end {
+    @include flexCenter(center);
+    img {
+      border-radius: 50px;
+      height: 70px;
+      width: 70px;
+      margin: 20px;
+    }
+  }
 }

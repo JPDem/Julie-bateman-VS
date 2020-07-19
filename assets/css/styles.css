@@ -1,61 +1,85 @@
-body {
+* {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: "Dosis", sans-serif;
 }
 
-section {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 150px 1fr;
-      grid-template-columns: 150px 1fr;
-  -ms-grid-rows: 50px 1fr 50px;
-      grid-template-rows: 50px 1fr 50px;
-      grid-template-areas: "header1 header1" ". gallery" "footer footer";
-  grid-gap: 15px;
-  background-color: #ececec;
+nav li,
+nav a,
+nav button {
+  font-weight: 400;
+  font-size: 16px;
+  color: #1a1a1a;
+  text-decoration: none;
 }
 
-nav {
-  background: lightcoral;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
-  grid-area: header1;
+.logo {
+  cursor: pointer;
+  text-decoration: none;
+  border: solid white 1px;
+  padding: 5px 10px;
+  color: white;
+  font-family: "Indie Flower", cursive;
 }
 
-nav ul {
+.nav-links {
+  list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  padding: 0;
-  margin: auto;
-  height: 100%;
-  text-align: bottom;
 }
 
-nav ul li {
+.nav-links li {
   padding: 0 20px;
-  height: 100%;
-  list-style: none;
-  border: 1px #8d8a8a solid;
 }
 
-nav ul .home-link {
-  margin-right: auto;
+.nav-links li a {
+  -webkit-transition: all 0.2s ease 0s;
+  transition: all 0.2s ease 0s;
+}
+
+.nav-links li a:hover {
+  color: yellow;
+}
+
+header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  font-family: "Dosis", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 10%;
+  background-color: #c268b7;
+}
+
+header button {
+  font-family: "Dosis";
+  padding: 9px 25px;
+  background-color: #8dd1cb;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  -webkit-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+}
+
+header button:hover {
+  background-color: rgba(141, 209, 203, 0.7);
 }
 
 .banner {
@@ -63,7 +87,7 @@ nav ul .home-link {
 }
 
 .side-bar {
-  background: #bdc3c7;
+  background: #ff7a7a;
   position: fixed;
   height: 60%;
   top: 15%;
@@ -77,15 +101,14 @@ nav ul .home-link {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  align-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
   border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
 }
@@ -102,8 +125,6 @@ nav ul .home-link {
 
 .image-gallery {
   border-radius: 3px;
-  -ms-grid-row: 2;
-  -ms-grid-column: 2;
   grid-area: gallery;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -114,8 +135,6 @@ nav ul .home-link {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
@@ -127,9 +146,6 @@ nav ul .home-link {
 
 footer {
   background: #e6e66a;
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
   grid-area: footer;
 }
 
@@ -139,7 +155,7 @@ img {
 }
 
 .active {
-  background: #b61f1f;
+  background: #8dd1cb;
 }
 
 @-webkit-keyframes fadeIn {
@@ -163,5 +179,24 @@ img {
 .fade-in {
   -webkit-animation: fadeIn 0.5s ease-in-out;
           animation: fadeIn 0.5s ease-in-out;
+}
+
+footer .end {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .end img {
+  border-radius: 50px;
+  height: 70px;
+  width: 70px;
+  margin: 20px;
 }
 /*# sourceMappingURL=styles.css.map */
